@@ -21,4 +21,4 @@ jobs:
           fqdn: ${{ secrets.FQDN }}
           user: ${{ secrets.USER }}
           api_token: ${{ secrets.API_TOKEN }}
-          labels: "action-test automated"
+          labels: "action-test automated $GITHUB_REPOSITORY"
