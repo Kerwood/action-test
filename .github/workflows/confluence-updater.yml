@@ -1,0 +1,24 @@
+name: Update Confluence
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "./README.md"
+
+jobs:
+  confluence-updater:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Confluence Updater
+        uses: kerwood/confluence-updater-action@main
+        with:
+          fqdn: ${{ secrets.FQDN }}
+          user: ${{ secrets.USER }}
+          api_token: ${{ secrets.API_TOKEN }}
+          labels: "action-test automated"

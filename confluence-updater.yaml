@@ -1,0 +1,7 @@
+pages:
+  - filePath: ./README.md
+    pageId: 428183952
+    overrideTitle: Title Override
+    labels:
+      - ci/cd
+
